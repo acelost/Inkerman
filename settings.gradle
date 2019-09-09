@@ -1,0 +1,2 @@
+include ':app', ':inkerman'
+rootProject.name='Inkerman'
