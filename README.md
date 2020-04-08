@@ -2,7 +2,7 @@
 
 [![Bintray][bintraybadge-svg]][bintray]
 
-A strong debug logging library for Android developers. Inkerman has a simple and convenient api which allows you to compose readable debug logs in a builder style.
+A strong debug logging library for Android developers. Inkerman has a simple and convenient api which allows you to compose readable debug logs in a builder style. You can easily navigate between logs because Inkerman prints hyperlinks to code.
 
 ```java
 public void compoundLetter() {
