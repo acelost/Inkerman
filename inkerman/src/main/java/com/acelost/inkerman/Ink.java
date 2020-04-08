@@ -28,14 +28,14 @@ public class Ink {
 
     @CheckResult
     @NonNull
-    public static Letter text(@Nullable final Object text) {
-        return new Letter().text(text);
+    public static Letter message(@Nullable final Object message) {
+        return new Letter().message(message);
     }
 
     @CheckResult
     @NonNull
-    public static Letter variable(@NonNull final String message, @Nullable final Object value) {
-        return new Letter().variable(message, value);
+    public static Letter variable(@NonNull final String name, @Nullable final Object value) {
+        return new Letter().variable(name, value);
     }
 
     @CheckResult
@@ -76,8 +76,8 @@ public class Ink {
 
         @CheckResult
         @NonNull
-        public Letter text(@Nullable final Object text) {
-            words.add(text != null ? text.toString() : "null-text");
+        public Letter message(@Nullable final Object message) {
+            words.add(message != null ? message.toString() : "null-message");
             return this;
         }
 

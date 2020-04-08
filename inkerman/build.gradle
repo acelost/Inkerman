@@ -5,14 +5,14 @@ publish {
 
     def groupProjectID = 'com.acelost.ink'
     def artifactProjectID = 'ink'
-    def publishVersionID = '0.0.1'
+    def publishVersionID = '0.0.2'
 
     userOrg = 'acelost'
     repoName = 'Ink'
     groupId = groupProjectID
     artifactId = artifactProjectID
     publishVersion = publishVersionID
-    desc = 'Android library for loggin debug info.'
+    desc = 'Android library for logging debug info.'
     website = 'https://github.com/acelost/Inkerman'
 
 }
@@ -27,7 +27,6 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
 
@@ -42,7 +41,5 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.annotation:annotation:1.1.0'
 }
