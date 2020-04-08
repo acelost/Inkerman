@@ -28,7 +28,7 @@ public class Ink {
 
     @CheckResult
     @NonNull
-    public static Letter message(@Nullable final Object message) {
+    public static Letter message(@Nullable final Object... message) {
         return new Letter().message(message);
     }
 
@@ -76,8 +76,14 @@ public class Ink {
 
         @CheckResult
         @NonNull
-        public Letter message(@Nullable final Object message) {
-            words.add(message != null ? message.toString() : "null-message");
+        public Letter message(@Nullable final Object... messages) {
+            if (messages != null) {
+                for (Object message : messages) {
+                    words.add(message != null ? message.toString() : "null-message");
+                }
+            } else {
+                words.add("null-message-array");
+            }
             return this;
         }
 
